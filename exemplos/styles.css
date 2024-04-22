@@ -1,0 +1,31 @@
+/* Estilo para o elemento com imagem */
+.elemento-com-imagem {
+  width: 200px; /* Defina o tamanho da sua imagem */
+  height: 200px; /* Defina o tamanho da sua imagem */
+  background-image: url('caminho/para/sua/imagem.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  position: relative;
+}
+
+/* Estilo para a mensagem */
+.elemento-com-imagem::after {
+  content: "Esta é a mensagem que aparecerá no cursor quando você passar o mouse aqui."; /* Mensagem desejada */
+  position: absolute;
+  bottom: 10px; /* Ajuste a posição vertical da mensagem conforme necessário */
+  left: 50%; /* Ajuste a posição horizontal da mensagem conforme necessário */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo da mensagem */
+  color: #fff; /* Cor do texto da mensagem */
+  padding: 5px 10px; /* Espaçamento interno da mensagem */
+  border-radius: 5px; /* Borda arredondada da mensagem */
+  font-size: 14px; /* Tamanho da fonte da mensagem */
+  white-space: nowrap; /* Impede que a mensagem seja quebrada em várias linhas */
+  pointer-events: none; /* Impede que a mensagem interfira nos eventos de mouse */
+  opacity: 0; /* Torna a mensagem inicialmente invisível */
+  transition: opacity 0.3s ease; /* Adiciona uma transição suave para a opacidade */
+}
+
+/* Mostrar mensagem quando o cursor está sobre o elemento */
+.elemento-com-imagem:hover::after {
+  opacity: 1; /* Torna a mensagem visível quando o cursor está sobre o elemento */
+}

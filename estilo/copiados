@@ -1,0 +1,70 @@
+#opcoes {
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+.opcao {
+    margin-right: 10px; /* Espaçamento entre as opções */
+    
+}
+
+.opcao a {
+    text-decoration: none;
+    color: #000; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.opcao a:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+
+div#opcoes {
+    background-color: rgb(223, 71, 71);
+    height: 100px; /* Ajustando altura */
+    display: flex;
+    align-items: center; /* Centralizando verticalmente */
+    padding: 0 2vw; /* Adicionando espaço interno */
+}
+
+div#opcoes > a {
+    text-decoration: none;
+}
+
+div#opcoes a h2 {
+    color: black;
+    text-decoration: none;
+    font-size: 2vw;
+    margin-right: 3vw; /* Adicionando espaço entre os itens */
+}
+
+div#opcoes a h2#quatro {
+    margin-left: auto; /* Move "Especialidades" para o final */
+    margin-right: 0; /* Resetando margem direita */
+}
+
+div#topo div#opcoes a img {
+    height: 6vh; /* Reduzindo um pouco a altura */
+    margin-right: 2vw; /* Adicionando espaço à direita */
+}
+
+/* Estilos adicionais para telas grandes */
+@media screen and (min-width: 768px) {
+    div#opcoes {
+        height: 10vh;
+    }
+
+    div#opcoes a h2 {
+        font-size: 1.5vw; /* Reduzindo o tamanho da fonte */
+        margin-right: 4vw; /* Aumentando o espaço entre os itens */
+    }
+
+    div#topo div#opcoes a img {
+        height: 8vh; /* Ajustando a altura */
+        margin-right: 3vw; /* Aumentando o espaço à direita */
+    }
+}
